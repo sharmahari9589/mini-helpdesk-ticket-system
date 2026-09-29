@@ -1,4 +1,13 @@
 node_modules/
+.env
+.env.*
+!.env.example
+
+backend/*.sqlite
+backend/*.sqlite-shm
+backend/*.sqlite-wal
+
+*.log
 dist/
 .claude/
 .env

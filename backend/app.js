@@ -27,7 +27,7 @@ export function createApp({ db, config }) {
     res.status(404).json({ error: "API endpoint not found." });
   });
 
-  const distPath = path.resolve(currentDirectory, "../dist");
+  const distPath = path.resolve(currentDirectory, "../frontend/dist");
   app.use(express.static(distPath));
   app.get("*", (_req, res) => {
     res.sendFile(path.join(distPath, "index.html"), (error) => {
