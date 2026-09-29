@@ -1,0 +1,35 @@
+{
+  "name": "helpdesk-ticket-system",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "node --watch server/index.js",
+    "dev:client": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "test": "node --test",
+    "format": "prettier --write \"client/**/*.{js,jsx,css}\" \"server/**/*.js\" \"*.{js,json,md,html}\"",
+    "format:check": "prettier --check \"client/**/*.{js,jsx,css}\" \"server/**/*.js\" \"*.{js,json,md,html}\"",
+    "check": "npm test && npm run format:check && npm run build",
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^18.0.4",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sql.js": "^1.13.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "prettier": "^3.9.9",
+    "vite": "^6.0.7"
+  }
+}

@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.claude/
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.log
+coverage/
